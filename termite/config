@@ -10,6 +10,10 @@ dynamic_title = true
 filter_unmatched_urls = true
 #font = Monospace 11
 font = Hack Bold 11
+#Hermit Bold 11
+#Terminus Bold 15
+#Hack Bold 11
+
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal

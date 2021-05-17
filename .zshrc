@@ -155,6 +155,9 @@ alias free="free -mt"
 #use all cores
 alias uac="sh ~/.bin/main/000*"
 
+# id3v2
+alias tag="id3v2"
+
 #continue download
 alias wget="wget -c"
 
@@ -206,6 +209,13 @@ alias hw="hwinfo --short"
 #skip integrity check
 alias yayskip='yay -S --mflags --skipinteg'
 alias trizenskip='trizen -S --skipinteg'
+
+# Musikcube
+alias mke='musikcube'
+
+#record screen with ffmpeg
+alias record-screen='ffmpeg -f x11grab -s 1920x1080 -i :0.0 /home/samurai/Videos/screen-recordings/out.mkv 
+'
 
 # Vim
 alias vi='vim'

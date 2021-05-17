@@ -120,9 +120,16 @@ super + shift + Return
 #super + shift + KP_Enter
 #	thunar
 
+
+
 #dmenu
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	dmenu_run -i -nb '#191919' -nf '#ff0f87' -sb '#3d3d3d' -sf '#ff0f87' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+#-nf '#fea63c'
+#dmenu_run -i -nb '#191919' -nf '#ff0f87' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+
 
 #reload sxhkd:
 super + shift + s
@@ -400,6 +407,10 @@ super + f
 super + p
 	bspc node --state \~pseudo_tiled
 
+# Toggle floating window
+super + ,
+    bspc node --state \~floating
+
 #kill
 super + q
 	bspc node -c
@@ -410,7 +421,7 @@ super + q
 
 #Focus selected desktop
 super + Tab
-	bspc desktop -f '^{1-9,10}'
+	bspc desktop -f '^{1-4,5}'
 
 # Increase/decrease window gap on focused desktop
 super + bracket{left,right}
@@ -512,11 +523,11 @@ super + ctrl + {_,shift +}{1-9}
 
 #Focus selected desktop
 alt + Tab
-	bspc desktop -f '^{1-5,6}'
+	bspc desktop -f '^{1-4,5}'
 
 	#Focus selected desktop
-alt + shift + Tab
-	bspc desktop -f '^{1-5,6}'
+#alt + shift + Tab
+#  	bspc desktop -f '^{1-4,5}'
 
 #Rotate desktop
 alt + space
@@ -573,7 +584,7 @@ super + {1-5,0}
 
 #Switch here between qwerty and azerty or make new one
 #Move window to selected desktop FOR QWERTY KEYBOARDS
-super + shift + {1-9,0}
+super + shift + {1-5,0}
     id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #Move window to selected desktop FOR AZERTY KEYBOARDS
